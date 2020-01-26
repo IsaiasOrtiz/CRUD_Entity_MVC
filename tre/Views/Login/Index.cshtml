@@ -1,0 +1,26 @@
+﻿@model tre.Models.VistasModel.LoginViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Login","Login",FormMethod.Get))
+{
+<table>
+    <tr>
+        <td>Usuario</td>
+        <td>@Html.TextBoxFor(d => d.usuario)</td>
+
+    </tr>
+    <tr>
+        <td>Clave</td>
+        <td>@Html.TextBoxFor(d => d.clave)</td>
+
+    </tr>
+    <tr coolspan="2">
+        <td><input type="submit" name="name" value="Ingresar" /></td>
+        
+
+    </tr>
+</table>
+}

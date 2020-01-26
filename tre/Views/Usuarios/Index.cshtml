@@ -1,0 +1,28 @@
+﻿@model List<tre.Models.VistasModel.ListaUsuarios>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <td>Id:</td>
+        <td>Usuario:</td>
+        <td>Clave</td>
+        <td>Opcion 1</td>
+        <td>Opcion 2</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.usuario</td>
+            <td>@item.clave</td>
+            <td><a href="~/Usuarios/Editar/@item.id" class="btn btn-primary">Editar</a></td>
+            <td><a href="~/Usuarios/Eliminar/@item.id" class="btn btn-danger">Eliminar</a></td>
+        </tr>
+    }
+   
+
+</table>

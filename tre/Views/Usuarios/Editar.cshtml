@@ -1,0 +1,36 @@
+﻿@model tre.Models.VistasModel.UsuariosViewModel
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+@using (Html.BeginForm("Editar", "Usuarios", FormMethod.Post))
+{
+    @Html.HiddenFor(d=>d.id)
+
+<table>
+    <tr coolspan="2">
+        <td>Editar usuario:</td>
+    </tr>
+    <tr>
+        <td>Id:</td>
+        <td>
+            @Html.TextBoxFor(d => d.id)
+    </td>
+</tr>
+<tr>
+    <td> Usuario:</td>
+    <td>
+        @Html.TextBoxFor(d => d.usuario)
+    </td>
+</tr>
+<tr>
+    <td>Clave:</td>
+    <td> @Html.TextBoxFor(d => d.clave)</td>
+</tr>
+<tr coolspan="2">
+    <td><input type="submit" name="name" value="Editar." class="btm btn-primary" /></td>
+   
+</tr>
+</table>
+}
